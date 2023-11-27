@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table Add/Remove Elements</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+     $("#btnAdd").click(function(){
+        $("#myTable tr:last").after("<tr><td>New Cell</td><td>New Cell</td></tr>");
+     });
+    
+     $("#btnChangeColor").click(function(){
+        $("#btnChangeColor").css("color", "red");
+     });
+    
+     $("#btnRemove").click(function(){
+        var id = $("#txtRemove").val();
+        $("#" + id).remove();
+     });
+    });
+    </script>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table id="myTable">
+ <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+ </tr>
+</table>
+
+<button id="btnAdd">Add Row</button>
+<button id="btnChangeColor">Change Color</button>
+
+<p>Remove all elements with id:</p>
+<input type="text" id="txtRemove">
+<button id="btnRemove">Remove</button>
+
+</body>
+</html>

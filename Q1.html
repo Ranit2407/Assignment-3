@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let a=0;
+            $("p").each(function(){
+                a++;
+            })
+            $("#count").click(function(){
+                alert(a)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="selected">
+        <p>Red</p>
+        <p>White</p>
+        <p>Green</p>
+        <p>Blue</p>
+        <p>Black</p>
+        <p>Orange</p>
+        <h4 id="count">Count the Number of Paragraphs</h4>
+    </div>
+</body>
+</html>
